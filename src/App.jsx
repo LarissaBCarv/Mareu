@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Hero />
       <About />
-      <Process />7
+      <Process />
       <Products />
       <Moments />
       <Contact />
