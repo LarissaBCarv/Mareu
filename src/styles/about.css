@@ -4,6 +4,7 @@
 }
 
 .about-container {
+  font-family: "Quicksand", sans-serif;
   max-width: 1200px;
   margin: 0 auto;
 
@@ -21,6 +22,7 @@
 }
 
 .about-text span {
+  font-family: "Quicksand", sans-serif;
   display: block;
   margin-bottom: 20px;
 
@@ -41,6 +43,7 @@
 }
 
 .about-text p {
+  font-family: "Quicksand", sans-serif;
   font-size: 1.05rem;
   line-height: 1.8;
   color: #555;

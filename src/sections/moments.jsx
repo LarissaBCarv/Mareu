@@ -1,5 +1,14 @@
 import "../styles/moments.css";
 
+const images = [
+  "/banho.png",
+  "/livro.png",
+  "/cafe.png",
+  "/estudo.png",
+  "/cama.png",
+  "/meditacao.png",
+];
+
 export default function Moments() {
   return (
     <section className="moments" id="momentos">
@@ -12,17 +21,13 @@ export default function Moments() {
           </h2>
         </div>
 
-        <div className="moments-grid">
-          <div className="moment-card large">
-            <img src="/moment-1.jpg" alt="Momento Marêu" />
-          </div>
-
-          <div className="moment-card">
-            <img src="/moment-2.jpg" alt="Momento Marêu" />
-          </div>
-
-          <div className="moment-card">
-            <img src="/moment-3.jpg" alt="Momento Marêu" />
+        <div className="moments-carousel">
+          <div className="moments-track">
+            {[...images, ...images].map((image, index) => (
+              <div className="moment-card" key={index}>
+                <img src={image} alt="Momento Marêu" />
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ export default function Hero() {
           experiências acolhedoras.
         </p>
 
-        <button>Conheça nossas fragrâncias</button>
+        <a href="#produtos">Conheça nossas fragrâncias</a>
       </div>
     </section>
   );

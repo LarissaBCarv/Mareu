@@ -17,39 +17,55 @@ export default function Process() {
 
         <div className="process-steps">
           <div className="process-step">
-            <span>01</span>
-            <h3>Escolha dos aromas</h3>
-            <p>
-              Fragrâncias selecionadas para criar sensações leves, acolhedoras e
-              marcantes.
-            </p>
+            <img src="/aromas.png" alt="Escolha dos aromas" />
+
+            <div className="process-step-content">
+              <h3>Escolha dos aromas</h3>
+
+              <p>
+                Fragrâncias selecionadas para criar sensações leves, acolhedoras
+                e marcantes.
+              </p>
+            </div>
           </div>
 
           <div className="process-step">
-            <span>02</span>
-            <h3>Produção manual</h3>
-            <p>
-              A cera é preparada e colocada em cada recipiente com atenção aos
-              detalhes.
-            </p>
+            <img src="/producao.png" alt="Produção manual" />
+
+            <div className="process-step-content">
+              <h3>Produção manual</h3>
+
+              <p>
+                A cera é preparada e colocada em cada recipiente com atenção aos
+                detalhes.
+              </p>
+            </div>
           </div>
 
           <div className="process-step">
-            <span>03</span>
-            <h3>Cura da vela</h3>
-            <p>
-              As velas descansam pelo tempo necessário para preservar qualidade,
-              textura e aroma.
-            </p>
+            <img src="/curadoria.png" alt="Cura da vela" />
+
+            <div className="process-step-content">
+              <h3>Cura da vela</h3>
+
+              <p>
+                As velas descansam pelo tempo necessário para preservar
+                qualidade, textura e aroma.
+              </p>
+            </div>
           </div>
 
           <div className="process-step">
-            <span>04</span>
-            <h3>Embalagem final</h3>
-            <p>
-              Cada peça é finalizada e embalada com carinho antes de chegar até
-              você.
-            </p>
+            <img src="/embalagem.png" alt="Embalagem final" />
+
+            <div className="process-step-content">
+              <h3>Embalagem final</h3>
+
+              <p>
+                Cada peça é finalizada e embalada com carinho antes de chegar
+                até você.
+              </p>
+            </div>
           </div>
         </div>
       </div>

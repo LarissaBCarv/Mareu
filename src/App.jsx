@@ -6,16 +6,18 @@ import Products from "./sections/products";
 import Moments from "./sections/moments";
 import Contact from "./sections/contact";
 import Footer from "./sections/footer";
+import ScrollTop from "./components/scrollTop";
 
 function App() {
   return (
     <>
       <Header />
+      <ScrollTop />
       <Hero />
       <About />
       <Process />
-      <Products />
       <Moments />
+      <Products />
       <Contact />
       <Footer />
     </>

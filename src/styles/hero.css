@@ -70,7 +70,7 @@
   margin-bottom: 2.5rem;
 }
 
-.hero-content button {
+.hero-content a {
   font-family: "Quicksand", sans-serif;
   padding: 1rem 2rem;
 
@@ -84,7 +84,7 @@
   transition: 0.3s ease;
 }
 
-.hero-content button:hover {
+.hero-content a:hover {
   transform: translateY(-2px);
   opacity: 0.9;
 }

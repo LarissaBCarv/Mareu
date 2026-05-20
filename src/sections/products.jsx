@@ -14,7 +14,7 @@ export default function Products() {
 
         <div className="products-grid">
           <div className="product-card">
-            <img src="/vela-1.png" alt="Vela Brisa" />
+            <img src="/brisa.png" alt="Vela Brisa" />
 
             <div className="product-info">
               <h3>Brisa</h3>
@@ -28,7 +28,7 @@ export default function Products() {
           </div>
 
           <div className="product-card">
-            <img src="/vela-2.png" alt="Vela Aurora" />
+            <img src="/brisa.png" alt="Vela Aurora" />
 
             <div className="product-info">
               <h3>Aurora</h3>
@@ -42,7 +42,7 @@ export default function Products() {
           </div>
 
           <div className="product-card">
-            <img src="/vela-3.png" alt="Vela Sereno" />
+            <img src="/brisa.png" alt="Vela Sereno" />
 
             <div className="product-info">
               <h3>Sereno</h3>

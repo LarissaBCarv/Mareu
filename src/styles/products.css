@@ -1,6 +1,6 @@
 .products {
   width: 100%;
-  padding: 120px 24px;
+  padding: 80px 24px;
 
   background: #f8f6f3;
 }
@@ -15,6 +15,7 @@
 }
 
 .products-subtitle {
+  font-family: "Quicksand", sans-serif;
   display: block;
 
   margin-bottom: 24px;
@@ -27,6 +28,7 @@
 }
 
 .products h2 {
+  font-family: "Quicksand", sans-serif;
   max-width: 700px;
 
   font-size: 3rem;
@@ -61,6 +63,7 @@
 }
 
 .product-info h3 {
+  font-family: "Quicksand", sans-serif;
   margin-bottom: 16px;
 
   font-size: 1.5rem;
@@ -70,6 +73,7 @@
 }
 
 .product-info p {
+  font-family: "Quicksand", sans-serif;
   margin-bottom: 24px;
 
   line-height: 1.7;
@@ -78,6 +82,7 @@
 }
 
 .product-info span {
+  font-family: "Quicksand", sans-serif;
   display: block;
 
   margin-bottom: 24px;
@@ -89,6 +94,7 @@
 }
 
 .product-info button {
+  font-family: "Quicksand", sans-serif;
   width: 100%;
   padding: 1rem;
 
@@ -114,6 +120,7 @@
 }
 
 .finish-order {
+  font-family: "Quicksand", sans-serif;
   padding: 1rem 2.5rem;
 
   border-radius: 999px;

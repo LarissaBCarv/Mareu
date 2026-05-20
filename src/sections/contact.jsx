@@ -16,9 +16,20 @@ export default function Contact() {
         </div>
 
         <div className="contact-links">
-          <a href="#">Instagram</a>
-          <a href="#">WhatsApp</a>
-          <a href="#">TikTok</a>
+          <a
+            href="https://www.instagram.com/mareu.loja/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/instagram.png" alt="Instagram" />
+          </a>
+          <a
+            href="https://wa.me/5512981115956"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/whatsapp.png" alt="WhatsApp" />
+          </a>
         </div>
       </div>
     </section>

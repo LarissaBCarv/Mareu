@@ -31,6 +31,7 @@
 }
 
 .footer-links a {
+  font-family: "Quicksand", sans-serif;
   color: white;
   text-decoration: none;
 
@@ -49,6 +50,7 @@
 
 .footer-bottom p,
 .footer-bottom span {
+  font-family: "Quicksand", sans-serif;
   font-size: 0.9rem;
 
   color: rgba(255, 255, 255, 0.6);

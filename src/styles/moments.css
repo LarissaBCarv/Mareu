@@ -1,22 +1,23 @@
 .moments {
   width: 100%;
-  padding: 120px 24px;
-
+  padding: 120px 0;
   background: #ffffff;
+  overflow: hidden;
 }
 
 .moments-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .moments-content {
-  margin-bottom: 64px;
+  max-width: 1200px;
+  margin: 0 auto 64px;
+  padding: 0 24px;
 }
 
 .moments-subtitle {
+  font-family: "Quicksand", sans-serif;
   display: block;
-
   margin-bottom: 24px;
 
   font-size: 0.85rem;
@@ -27,6 +28,7 @@
 }
 
 .moments h2 {
+  font-family: "Quicksand", sans-serif;
   max-width: 700px;
 
   font-size: 3rem;
@@ -36,21 +38,34 @@
   color: #2b2b2b;
 }
 
-.moments-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 300px 300px;
+.moments-carousel {
+  width: 100%;
+  overflow: hidden;
+}
 
+.moments-track {
+  display: flex;
   gap: 24px;
+
+  width: max-content;
+
+  animation: scrollMoments 45s linear infinite;
+}
+
+.moments-carousel:hover .moments-track {
+  animation-play-state: paused;
 }
 
 .moment-card {
-  overflow: hidden;
-  border-radius: 24px;
-}
+  width: 320px;
+  height: 420px;
 
-.moment-card.large {
-  grid-row: span 2;
+  flex-shrink: 0;
+
+  border-radius: 28px;
+  overflow: hidden;
+
+  transition: transform 0.45s ease;
 }
 
 .moment-card img {
@@ -58,4 +73,20 @@
   height: 100%;
 
   object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.moment-card:hover img {
+  transform: scale(1.06);
+}
+
+@keyframes scrollMoments {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 12px));
+  }
 }
