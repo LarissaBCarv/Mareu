@@ -39,3 +39,17 @@
 
   background: #243942;
 }
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .scroll-top {
+    right: 17px;
+    bottom: 5.5rem;
+
+    width: 54px;
+    height: 54px;
+
+    font-size: 1.2rem;
+  }
+}

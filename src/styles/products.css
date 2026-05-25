@@ -562,11 +562,11 @@
   }
 
   .floating-cart {
-    right: 18px;
+    right: 17px;
     bottom: 18px;
 
-    width: 62px;
-    height: 62px;
+    width: 54px;
+    height: 54px;
 
     font-size: 1.35rem;
   }
