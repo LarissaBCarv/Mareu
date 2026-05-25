@@ -22,7 +22,11 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>© 2026 Marêu. Todos os direitos reservados.</p>
 
-          <a href="https://larissa-borges.vercel.app/">
+          <a
+            href="https://larissa-borges.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Desenvolvido por Larissa Borges
           </a>
         </div>

@@ -1,6 +1,6 @@
 .moments {
   width: 100%;
-  padding: 120px 0;
+  padding: 90px 0;
 
   background: #ffffff;
 
@@ -11,11 +11,22 @@
   width: 100%;
 }
 
+/* HEADER */
+
 .moments-content {
   max-width: 1200px;
 
   margin: 0 auto 64px;
   padding: 0 24px;
+
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 48px;
+  align-items: start;
+}
+
+.moments-text {
+  max-width: 700px;
 }
 
 .moments-subtitle {
@@ -42,6 +53,83 @@
 
   color: #2b2b2b;
 }
+
+/* SPOTIFY CARD */
+
+.moments-spotify-card {
+  padding: 28px;
+
+  border-radius: 28px;
+
+  background: #f8f6f3;
+
+  box-shadow: 0 20px 50px rgba(47, 63, 68, 0.08);
+}
+
+.spotify-label {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #456672;
+}
+
+.moments-spotify-card h3 {
+  margin-bottom: 12px;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  color: #2b2b2b;
+}
+
+.moments-spotify-card p {
+  margin-bottom: 20px;
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+
+  color: #5f6f73;
+}
+
+.moments-spotify-card img {
+  width: 160px;
+  height: 160px;
+
+  display: block;
+  margin-bottom: 20px;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+}
+
+.moments-spotify-card a {
+  display: inline-block;
+  padding: 12px 20px;
+
+  border-radius: 999px;
+
+  background: #456672;
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.moments-spotify-card a:hover {
+  background: #2f3f44;
+
+  transform: translateY(-2px);
+}
+
+/* CAROUSEL */
 
 .moments-carousel {
   width: 100%;
@@ -96,8 +184,14 @@
   }
 
   .moments-content {
+    grid-template-columns: 1fr;
+
     margin-bottom: 48px;
     padding: 0 24px;
+  }
+
+  .moments-spotify-card {
+    max-width: 420px;
   }
 
   .moment-card {
@@ -135,6 +229,16 @@
 
   .moments h2 {
     font-size: 2rem;
+  }
+
+  .moments-spotify-card {
+    padding: 24px;
+
+    text-align: center;
+  }
+
+  .moments-spotify-card img {
+    margin: 0 auto 20px;
   }
 
   .moment-card {
