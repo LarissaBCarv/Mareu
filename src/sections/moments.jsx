@@ -11,7 +11,7 @@ const images = [
 
 export default function Moments() {
   return (
-    <section className="moments" id="momentos">
+    <section className="moments reveal" id="momentos">
       <div className="moments-container">
         <div className="moments-content">
           <span className="moments-subtitle">Momentos</span>

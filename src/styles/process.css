@@ -1,6 +1,6 @@
 .process {
   width: 100%;
-  padding: 70px 24px;
+  padding: 100px 24px;
 
   background: #e7edf0;
 }
@@ -12,11 +12,13 @@
 
 .process-header {
   max-width: 720px;
+
   margin-bottom: 72px;
 }
 
 .process-header span {
   font-family: "Quicksand", sans-serif;
+
   display: block;
   margin-bottom: 20px;
 
@@ -29,9 +31,10 @@
 
 .process-header h2 {
   font-family: "Quicksand", sans-serif;
+
   margin-bottom: 24px;
 
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 5vw, 3rem);
   line-height: 1.1;
   font-weight: 400;
 
@@ -40,7 +43,6 @@
 
 .process-header p {
   font-family: "Quicksand", sans-serif;
-  margin-bottom: -10px;
 
   font-size: 1.05rem;
   line-height: 1.8;
@@ -89,7 +91,7 @@
 .process-step:hover img {
   transform: scale(1.06);
 
-  filter: brightness(0.8);
+  filter: brightness(0.85);
 }
 
 .process-step-content {
@@ -98,6 +100,7 @@
 
 .process-step h3 {
   font-family: "Quicksand", sans-serif;
+
   margin-bottom: 16px;
 
   font-size: 1.25rem;
@@ -108,27 +111,116 @@
 
 .process-step p {
   font-family: "Quicksand", sans-serif;
+
   line-height: 1.7;
 
   color: #666666;
 }
 
+/* DESKTOP MENOR */
+
 @media (max-width: 1100px) {
+  .process {
+    padding: 90px 24px;
+  }
+
   .process-steps {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 700px) {
+/* TABLET */
+
+@media (max-width: 768px) {
   .process {
-    padding: 60px 20px;
+    padding: 80px 24px;
+  }
+
+  .process-header {
+    margin-bottom: 48px;
+  }
+
+  .process-header span {
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+  }
+
+  .process-header p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .process-step-content {
+    padding: 28px;
+  }
+
+  .process-step img {
+    height: 220px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .process {
+    padding: 72px 20px;
+  }
+
+  .process-header {
+    margin-bottom: 36px;
   }
 
   .process-header h2 {
-    font-size: 2.3rem;
+    font-size: 2rem;
+  }
+
+  .process-header p {
+    font-size: 0.98rem;
   }
 
   .process-steps {
     grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .process-step {
+    border-radius: 20px;
+  }
+
+  .process-step img {
+    height: 240px;
+  }
+
+  .process-step-content {
+    padding: 24px;
+  }
+
+  .process-step h3 {
+    font-size: 1.15rem;
+  }
+
+  .process-step p {
+    font-size: 0.95rem;
+  }
+}
+
+/* MOBILE PEQUENO */
+
+@media (max-width: 380px) {
+  .process {
+    padding: 64px 18px;
+  }
+
+  .process-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .process-step img {
+    height: 220px;
+  }
+
+  .process-step-content {
+    padding: 20px;
   }
 }

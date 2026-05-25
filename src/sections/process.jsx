@@ -2,9 +2,9 @@ import "../styles/process.css";
 
 export default function Process() {
   return (
-    <section className="process" id="processo">
+    <section className="process reveal" id="processo">
       <div className="process-container">
-        <div className="process-header">
+        <div className="process-header reveal">
           <span>Processo artesanal</span>
 
           <h2>Do aroma ao acabamento, tudo é feito com cuidado.</h2>
@@ -16,7 +16,10 @@ export default function Process() {
         </div>
 
         <div className="process-steps">
-          <div className="process-step">
+          <div
+            className="process-step reveal-scale"
+            style={{ transitionDelay: "0.1s" }}
+          >
             <img src="/aromas.png" alt="Escolha dos aromas" />
 
             <div className="process-step-content">
@@ -29,7 +32,10 @@ export default function Process() {
             </div>
           </div>
 
-          <div className="process-step">
+          <div
+            className="process-step reveal-scale"
+            style={{ transitionDelay: "0.3s" }}
+          >
             <img src="/producao.png" alt="Produção manual" />
 
             <div className="process-step-content">
@@ -42,7 +48,10 @@ export default function Process() {
             </div>
           </div>
 
-          <div className="process-step">
+          <div
+            className="process-step reveal-scale"
+            style={{ transitionDelay: "0.5s" }}
+          >
             <img src="/curadoria.png" alt="Cura da vela" />
 
             <div className="process-step-content">
@@ -55,7 +64,10 @@ export default function Process() {
             </div>
           </div>
 
-          <div className="process-step">
+          <div
+            className="process-step reveal-scale"
+            style={{ transitionDelay: "0.7s" }}
+          >
             <img src="/embalagem.png" alt="Embalagem final" />
 
             <div className="process-step-content">

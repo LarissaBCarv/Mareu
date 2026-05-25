@@ -1,6 +1,6 @@
 .products {
   width: 100%;
-  padding: 80px 24px;
+  padding: 100px 24px;
 
   background: #f8f6f3;
 }
@@ -11,13 +11,15 @@
 }
 
 .products-content {
+  max-width: 760px;
+
   margin-bottom: 64px;
 }
 
 .products-subtitle {
   font-family: "Quicksand", sans-serif;
-  display: block;
 
+  display: block;
   margin-bottom: 24px;
 
   font-size: 0.85rem;
@@ -29,9 +31,10 @@
 
 .products h2 {
   font-family: "Quicksand", sans-serif;
+
   max-width: 700px;
 
-  font-size: 3rem;
+  font-size: clamp(2.1rem, 5vw, 3rem);
   line-height: 1.1;
   font-weight: 400;
 
@@ -41,14 +44,26 @@
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   gap: 32px;
 }
 
 .product-card {
   background: white;
+
   border-radius: 24px;
 
   overflow: hidden;
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.08);
 }
 
 .product-card img {
@@ -64,6 +79,7 @@
 
 .product-info h3 {
   font-family: "Quicksand", sans-serif;
+
   margin-bottom: 16px;
 
   font-size: 1.5rem;
@@ -74,6 +90,7 @@
 
 .product-info p {
   font-family: "Quicksand", sans-serif;
+
   margin-bottom: 24px;
 
   line-height: 1.7;
@@ -83,6 +100,7 @@
 
 .product-info span {
   font-family: "Quicksand", sans-serif;
+
   display: block;
 
   margin-bottom: 24px;
@@ -95,6 +113,7 @@
 
 .product-info button {
   font-family: "Quicksand", sans-serif;
+
   width: 100%;
   padding: 1rem;
 
@@ -105,11 +124,16 @@
 
   font-size: 0.95rem;
 
-  transition: 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    background 0.3s ease;
 }
 
 .product-info button:hover {
-  opacity: 0.9;
+  transform: translateY(-2px);
+
+  background: #243942;
 }
 
 .products-action {
@@ -121,6 +145,7 @@
 
 .finish-order {
   font-family: "Quicksand", sans-serif;
+
   padding: 1rem 2.5rem;
 
   border-radius: 999px;
@@ -130,9 +155,131 @@
 
   font-size: 1rem;
 
-  transition: 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    background 0.3s ease;
 }
 
 .finish-order:hover {
-  opacity: 0.9;
+  transform: translateY(-2px);
+
+  background: #243942;
+}
+
+/* DESKTOP MENOR */
+
+@media (max-width: 1100px) {
+  .products {
+    padding: 90px 24px;
+  }
+
+  .products-grid {
+    gap: 24px;
+  }
+
+  .product-card img {
+    height: 280px;
+  }
+
+  .product-info {
+    padding: 28px;
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-content {
+    margin-bottom: 48px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .products {
+    padding: 72px 20px;
+  }
+
+  .products-content {
+    margin-bottom: 36px;
+  }
+
+  .products-subtitle {
+    margin-bottom: 16px;
+
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+  }
+
+  .products h2 {
+    font-size: 2rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .product-card {
+    border-radius: 20px;
+  }
+
+  .product-card img {
+    height: 260px;
+  }
+
+  .product-info {
+    padding: 24px;
+  }
+
+  .product-info h3 {
+    font-size: 1.35rem;
+  }
+
+  .product-info p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .product-info span {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .products-action {
+    margin-top: 40px;
+  }
+
+  .finish-order {
+    width: 100%;
+
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* MOBILE PEQUENO */
+
+@media (max-width: 380px) {
+  .products {
+    padding: 64px 18px;
+  }
+
+  .products h2 {
+    font-size: 1.8rem;
+  }
+
+  .product-card img {
+    height: 230px;
+  }
+
+  .product-info {
+    padding: 20px;
+  }
 }

@@ -2,21 +2,27 @@ import "../styles/hero.css";
 
 export default function Hero() {
   return (
-    <section className="hero">
-      <img src="/backHero.png" className="back-hero" alt="Background Hero" />
+    <section className="hero" id="inicio">
+      <img src="/backHero.png" className="back-hero" alt="Vela Marêu" />
 
       <div className="hero-content">
-        <p className="subtitle">Velas aromáticas artesanais</p>
+        <span className="subtitle">
+          Velas aromáticas
+          <br className="mobile-break" /> artesanais
+        </span>
 
         <h1>
-          Simplicidade
+          Serenidade
           <br />
           em cada chama
         </h1>
 
         <p className="description">
-          Produzidas artesanalmente para transformar pequenos momentos em
-          experiências acolhedoras.
+          Produzidas artesanalmente <br className="mobile-break" />
+          para transformar pequenos <br className="mobile-break" />
+          momentos em experiências
+          <br className="mobile-break" />
+          acolhedoras.
         </p>
 
         <a href="#produtos">Conheça nossas fragrâncias</a>

@@ -1,50 +1,161 @@
 .about {
   padding: 120px 6%;
+
   background: #f6fcff;
+
+  overflow: hidden;
 }
 
 .about-container {
   font-family: "Quicksand", sans-serif;
+
   max-width: 1200px;
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 72px;
   align-items: center;
 }
 
-.about-image img {
-  width: 100%;
-  height: 520px;
-  object-fit: cover;
-  border-radius: 24px;
+.about-text {
+  max-width: 560px;
 }
 
 .about-text span {
   font-family: "Quicksand", sans-serif;
+
   display: block;
   margin-bottom: 20px;
 
   font-size: 0.85rem;
   letter-spacing: 3px;
   text-transform: uppercase;
+
   color: #456672;
 }
 
 .about-text h2 {
   font-family: "Quicksand", sans-serif;
+
   margin-bottom: 24px;
 
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 5vw, 3rem);
   line-height: 1.1;
   font-weight: 400;
+
   color: #2b2b2b;
 }
 
 .about-text p {
   font-family: "Quicksand", sans-serif;
+
   font-size: 1.05rem;
   line-height: 1.8;
+
   color: #555;
+}
+
+.about-image {
+  border-radius: 24px;
+
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 520px;
+
+  object-fit: cover;
+
+  border-radius: 24px;
+
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.04);
+
+  filter: brightness(0.96);
+}
+
+/* TABLET */
+
+@media (max-width: 980px) {
+  .about {
+    padding: 90px 24px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+
+    gap: 48px;
+  }
+
+  .about-text {
+    max-width: 720px;
+  }
+
+  .about-image img {
+    height: 420px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .about {
+    padding: 72px 20px;
+  }
+
+  .about-container {
+    gap: 36px;
+  }
+
+  .about-text span {
+    margin-bottom: 16px;
+
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+  }
+
+  .about-text h2 {
+    margin-bottom: 20px;
+
+    font-size: 2.1rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .about-image {
+    border-radius: 20px;
+  }
+
+  .about-image img {
+    height: 340px;
+
+    border-radius: 20px;
+  }
+}
+
+/* MOBILE PEQUENO */
+
+@media (max-width: 380px) {
+  .about {
+    padding: 64px 18px;
+  }
+
+  .about-text h2 {
+    font-size: 1.9rem;
+  }
+
+  .about-image img {
+    height: 300px;
+  }
 }

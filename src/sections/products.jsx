@@ -2,9 +2,9 @@ import "../styles/products.css";
 
 export default function Products() {
   return (
-    <section className="products" id="produtos">
+    <section className="products reveal" id="produtos">
       <div className="products-container">
-        <div className="products-content">
+        <div className="products-content reveal">
           <span className="products-subtitle">Fragrâncias</span>
 
           <h2>
@@ -13,7 +13,10 @@ export default function Products() {
         </div>
 
         <div className="products-grid">
-          <div className="product-card">
+          <div
+            className="product-card reveal-scale"
+            style={{ transitionDelay: "0.1s" }}
+          >
             <img src="/brisa.png" alt="Vela Brisa" />
 
             <div className="product-info">
@@ -27,7 +30,10 @@ export default function Products() {
             </div>
           </div>
 
-          <div className="product-card">
+          <div
+            className="product-card reveal-scale"
+            style={{ transitionDelay: "0.3s" }}
+          >
             <img src="/brisa.png" alt="Vela Aurora" />
 
             <div className="product-info">
@@ -41,7 +47,10 @@ export default function Products() {
             </div>
           </div>
 
-          <div className="product-card">
+          <div
+            className="product-card reveal-scale"
+            style={{ transitionDelay: "0.5s" }}
+          >
             <img src="/brisa.png" alt="Vela Sereno" />
 
             <div className="product-info">
@@ -56,7 +65,7 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="products-action">
+        <div className="products-action reveal">
           <button className="finish-order">Finalizar pedido</button>
         </div>
       </div>
