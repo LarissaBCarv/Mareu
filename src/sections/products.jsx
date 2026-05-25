@@ -30,6 +30,7 @@ const products = [
 
 export default function Products() {
   const [cart, setCart] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const whatsappNumber = "5512981115956";
 
@@ -51,7 +52,6 @@ export default function Products() {
             : item,
         ),
       );
-
       return;
     }
 
@@ -117,50 +117,70 @@ Gostaria de seguir com a encomenda. Obrigada!`;
   }
 
   return (
-    <section className="products reveal" id="produtos">
-      <div className="products-container">
-        <div className="products-content reveal">
-          <span className="products-subtitle">Fragrâncias</span>
+    <>
+      <section className="products reveal" id="produtos">
+        <div className="products-container">
+          <div className="products-content reveal">
+            <span className="products-subtitle">Fragrâncias</span>
 
-          <h2>
-            Aromas pensados para transformar o ambiente e desacelerar a rotina.
-          </h2>
-        </div>
+            <h2>
+              Aromas pensados para transformar o ambiente e desacelerar a
+              rotina.
+            </h2>
+          </div>
 
-        <div className="products-grid">
-          {products.map((product, index) => (
-            <div
-              className="product-card reveal-scale"
-              style={{ transitionDelay: `${index * 0.2}s` }}
-              key={product.id}
-            >
-              <img src={product.image} alt={product.alt} />
+          <div className="products-grid">
+            {products.map((product, index) => (
+              <div
+                className="product-card reveal-scale"
+                style={{ transitionDelay: `${index * 0.2}s` }}
+                key={product.id}
+              >
+                <img src={product.image} alt={product.alt} />
 
-              <div className="product-info">
-                <h3>{product.name}</h3>
+                <div className="product-info">
+                  <h3>{product.name}</h3>
 
-                <p>{product.description}</p>
+                  <p>{product.description}</p>
 
-                <span>{formatPrice(product.price)}</span>
+                  <span>{formatPrice(product.price)}</span>
 
-                <button onClick={() => addToCart(product)}>Adicionar</button>
+                  <button onClick={() => addToCart(product)}>Adicionar</button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+      </section>
 
-        <div className="cart-box reveal">
+      <button className="floating-cart" onClick={() => setIsCartOpen(true)}>
+        <img src="/cart.png" alt="Carrinho" />
+
+        {getTotalItems() > 0 && (
+          <span className="cart-count">{getTotalItems()}</span>
+        )}
+      </button>
+
+      <div
+        className={`cart-overlay ${isCartOpen ? "active" : ""}`}
+        onClick={() => setIsCartOpen(false)}
+      >
+        <div
+          className={`cart-drawer ${isCartOpen ? "open" : ""}`}
+          onClick={(event) => event.stopPropagation()}
+        >
           <div className="cart-header">
             <div>
               <span>Carrinho</span>
               <h3>Seu pedido</h3>
             </div>
 
-            {cart.length > 0 && (
-              <button className="clear-cart" onClick={clearCart}>
-                Limpar
-              </button>
-            )}
+            <button
+              className="close-cart-icon"
+              onClick={() => setIsCartOpen(false)}
+            >
+              ×
+            </button>
           </div>
 
           {cart.length === 0 ? (
@@ -211,6 +231,10 @@ Gostaria de seguir com a encomenda. Obrigada!`;
                   <strong>{formatPrice(getTotalPrice())}</strong>
                 </div>
               </div>
+
+              <button className="clear-cart" onClick={clearCart}>
+                Limpar carrinho
+              </button>
             </>
           )}
 
@@ -219,6 +243,6 @@ Gostaria de seguir com a encomenda. Obrigada!`;
           </button>
         </div>
       </div>
-    </section>
+    </>
   );
 }
