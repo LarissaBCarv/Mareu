@@ -3,7 +3,7 @@ import "../styles/hero.css";
 export default function Hero() {
   return (
     <section className="hero" id="inicio">
-      <img src="/backHero.webp" className="back-hero" alt="Vela Marêu" />
+      <img src="/backHero.jpg" className="back-hero" alt="Vela Marêu" />
 
       <div className="hero-content">
         <span className="subtitle">
